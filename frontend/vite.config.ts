@@ -14,7 +14,18 @@ export default defineConfig({
     }
   },
   build: {
-    minify: 'terser',
-    sourcemap: true
+    minify: 'esbuild',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'three': ['three'],
+          'vendor': ['react', 'react-dom', 'axios']
+        }
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'axios', 'three']
   }
 })

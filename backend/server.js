@@ -14,8 +14,14 @@ const PORT = process.env.PORT || 3000
 
 // Middleware
 app.use(cors())
-app.use(express.json())
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.json({ limit: '50mb' }))
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: '1d' }))
+
+// Cache headers for data endpoints
+app.use(['/cars', '/colors', '/parts', '/liveries'], (req, res, next) => {
+  res.set('Cache-Control', 'public, max-age=3600')
+  next()
+})
 
 // File upload config
 const upload = multer({

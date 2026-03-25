@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, memo, Suspense, lazy } from 'react'
 import Viewer3D from './components/Viewer3D'
 import CustomizationPanel from './components/CustomizationPanel'
 import CarDetection from './components/CarDetection'
@@ -6,6 +6,10 @@ import { useCarCustomization } from './hooks/useCarCustomization'
 import { carService } from './services/api'
 import type { DetectedCar, Car } from './types'
 import './App.css'
+
+const MemoViewer = memo(Viewer3D)
+const MemoCustomization = memo(CustomizationPanel)
+const MemoDetection = memo(CarDetection)
 
 function App() {
   const [selectedCar, setSelectedCar] = useState<Car | null>(null)
@@ -80,7 +84,7 @@ function App() {
       <div className="app-content">
         {showDetection ? (
           <div className="detection-container">
-            <CarDetection
+            <MemoDetection
               onCarDetected={handleCarDetected}
               onConfirm={handleConfirmCar}
               currentDetected={detectedCar}
@@ -89,7 +93,7 @@ function App() {
         ) : (
           <>
             <div className="viewer-container">
-              <Viewer3D
+              <MemoViewer
                 modelPath={selectedCar?.modelPath}
                 primaryColor={customization.primaryColor}
                 secondaryColor={customization.secondaryColor}
@@ -97,7 +101,7 @@ function App() {
             </div>
 
             <div className="controls-container">
-              <CustomizationPanel
+              <MemoCustomization
                 selectedCar={customization.carId}
                 onColorChange={setPrimaryColor}
                 onKitChange={setBodyKit}
