@@ -182,7 +182,6 @@ const Viewer3D: React.FC<Viewer3DProps> = ({
     if (!modelRef.current) return
 
     const primaryColorObj = new THREE.Color(primaryColor)
-    const secondaryColorObj = secondaryColor ? new THREE.Color(secondaryColor) : null
 
     modelRef.current.traverse((child) => {
       if (child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial) {

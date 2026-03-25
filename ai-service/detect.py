@@ -4,9 +4,7 @@ import uvicorn
 import json
 from pathlib import Path
 from typing import Dict, List
-import numpy as np
-from PIL import Image
-import io
+import random
 
 app = FastAPI(title="Car Detection Service", version="1.0.0")
 
@@ -79,30 +77,17 @@ def detect_car_from_image(image_data: bytes) -> Dict:
     """
     Detect car from image.
     In production, this would use OpenCV + ML model for actual detection.
-    For now, returns a mock detection based on image characteristics.
+    For demo, returns a random car detection.
     """
     try:
-        # Open image
-        image = Image.open(io.BytesIO(image_data))
-        image = image.convert("RGB")
-
-        # Get image characteristics
-        arr = np.array(image)
-        avg_color = arr.mean(axis=(0, 1))
-
-        # Simple color-based detection (mock)
-        # Calculate dominant color channel
-        dominant_channel = np.argmax(avg_color)
-
-        # Map color dominance to cars
-        if dominant_channel == 0:  # Red dominant
-            return KNOWN_CARS[3]  # Ferrari
-        elif dominant_channel == 1:  # Green dominant
-            return KNOWN_CARS[2]  # Porsche (orange has high green)
-        elif dominant_channel == 2:  # Blue dominant
-            return KNOWN_CARS[1]  # Nissan Skyline
-        else:
+        # Validate image data exists
+        if not image_data or len(image_data) == 0:
             return KNOWN_CARS[0]  # Default to Lamborghini
+        
+        # Simple mock: return random car from known cars
+        # In production, this would analyze the image and identify the actual car
+        detected_car = random.choice(KNOWN_CARS)
+        return detected_car
 
     except Exception as e:
         # Return default on error

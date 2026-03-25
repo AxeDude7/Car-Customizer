@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Viewer3D from './components/Viewer3D'
 import CustomizationPanel from './components/CustomizationPanel'
 import CarDetection from './components/CarDetection'
@@ -18,7 +18,6 @@ function App() {
     setBodyKit,
     setWheels,
     setPrimaryColor,
-    setSecondaryColor,
     setLivery,
     reset,
   } = useCarCustomization()
