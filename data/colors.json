@@ -1,0 +1,87 @@
+[
+  {
+    "id": "lamborghini_yellow",
+    "name": "Lamborghini Yellow",
+    "hexCode": "#FFD700",
+    "metallic": true,
+    "category": "premium"
+  },
+  {
+    "id": "matte_black",
+    "name": "Matte Black",
+    "hexCode": "#0A0E27",
+    "metallic": false,
+    "category": "matte"
+  },
+  {
+    "id": "pearl_white",
+    "name": "Pearl White",
+    "hexCode": "#F8F8FF",
+    "metallic": true,
+    "category": "premium"
+  },
+  {
+    "id": "ferrari_red",
+    "name": "Ferrari Rosso Corsa",
+    "hexCode": "#DC143C",
+    "metallic": true,
+    "category": "premium"
+  },
+  {
+    "id": "carbon_black",
+    "name": "Carbon Black",
+    "hexCode": "#1A1A1A",
+    "metallic": false,
+    "category": "matte"
+  },
+  {
+    "id": "midnight_purple",
+    "name": "Midnight Purple",
+    "hexCode": "#191970",
+    "metallic": true,
+    "category": "premium"
+  },
+  {
+    "id": "electric_blue",
+    "name": "Electric Blue",
+    "hexCode": "#0082FA",
+    "metallic": true,
+    "category": "premium"
+  },
+  {
+    "id": "gunmetal_grey",
+    "name": "Gunmetal Grey",
+    "hexCode": "#2F4F4F",
+    "metallic": true,
+    "category": "standard"
+  },
+  {
+    "id": "matte_grey",
+    "name": "Matte Grey",
+    "hexCode": "#808080",
+    "metallic": false,
+    "category": "matte"
+  },
+  {
+    "id": "neon_green",
+    "name": "Neon Green",
+    "hexCode": "#39FF14",
+    "metallic": false,
+    "category": "neon"
+  },
+  {
+    "id": "orange_pearl",
+    "name": "Orange Pearl",
+    "hexCode": "#FF8C00",
+    "metallic": true,
+    "category": "premium"
+  },
+  {
+    "id": "chameleon",
+    "name": "Chameleon",
+    "hexCode": "#B1E000",
+    "metallic": true,
+    "category": "premium",
+    "specialEffect": "color_shifting"
+  }
+]

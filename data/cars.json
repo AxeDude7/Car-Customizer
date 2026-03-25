@@ -1,0 +1,62 @@
+[
+  {
+    "id": "lamborghini_aventador_2012",
+    "make": "Lamborghini",
+    "model": "Aventador",
+    "year": 2012,
+    "trim": "LP700-4",
+    "modelPath": "/models/lamborghini_aventador_2012.glb",
+    "baseColor": "#FFD700",
+    "compatibleKits": ["liberty_walk", "mansory", "hamann"],
+    "compatibleWheels": ["adv1_19", "hre_19", "rotiform_20"],
+    "compatibleLiveries": ["matte_black", "carbon_black", "racing_stripe"]
+  },
+  {
+    "id": "ferrari_f430",
+    "make": "Ferrari",
+    "model": "F430",
+    "year": 2005,
+    "trim": "Berlinetta",
+    "modelPath": "/models/ferrari_f430.glb",
+    "baseColor": "#FF0000",
+    "compatibleKits": ["novitec", "hamann"],
+    "compatibleWheels": ["bbs_18", "forgeline_19", "hre_20"],
+    "compatibleLiveries": ["matte_black", "carbon_fiber"]
+  },
+  {
+    "id": "nissan_skyline_r34",
+    "make": "Nissan",
+    "model": "Skyline GT-R",
+    "year": 1999,
+    "trim": "R34",
+    "modelPath": "/models/nissan_skyline_r34.glb",
+    "baseColor": "#0082FA",
+    "compatibleKits": ["liberty_walk", "tommykaira", "nismo"],
+    "compatibleWheels": ["work_18", "enkei_19", "rays_20"],
+    "compatibleLiveries": ["nismo_livery", "carbon_black", "racing_stripe"]
+  },
+  {
+    "id": "porsche_911_997",
+    "make": "Porsche",
+    "model": "911",
+    "year": 2009,
+    "trim": "Carrera S",
+    "modelPath": "/models/porsche_911_997.glb",
+    "baseColor": "#FF6600",
+    "compatibleKits": ["ruf", "techart", "hamann"],
+    "compatibleWheels": ["bbs_19", "oz_20", "hre_21"],
+    "compatibleLiveries": ["matte_black", "carbon_fiber", "racing_stripe"]
+  },
+  {
+    "id": "bugatti_chiron",
+    "make": "Bugatti",
+    "model": "Chiron",
+    "year": 2016,
+    "trim": "Sport",
+    "modelPath": "/models/bugatti_chiron.glb",
+    "baseColor": "#000000",
+    "compatibleKits": ["mansory"],
+    "compatibleWheels": ["bugatti_custom_20", "forgiato_21"],
+    "compatibleLiveries": ["carbon_black", "racing_stripe"]
+  }
+]

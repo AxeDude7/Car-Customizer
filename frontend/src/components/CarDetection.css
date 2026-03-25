@@ -1,0 +1,209 @@
+.car-detection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--secondary-color);
+  border-left: 1px solid var(--border-color);
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.detection-header {
+  margin-bottom: 24px;
+}
+
+.detection-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.description {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.upload-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--accent-color);
+  border-radius: 8px;
+  padding: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(15, 52, 96, 0.2);
+  margin-bottom: 16px;
+}
+
+.upload-area:hover {
+  border-color: var(--success-color);
+  background: rgba(6, 214, 160, 0.1);
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.upload-area h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.upload-area p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.preview-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.detection-loading {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--success-color);
+}
+
+.error-message {
+  background: rgba(239, 71, 111, 0.1);
+  border: 1px solid var(--warning-color);
+  color: var(--warning-color);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.confirmation-dialog {
+  background: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.confirmation-dialog h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--success-color);
+}
+
+.detection-info {
+  background: rgba(15, 52, 96, 0.3);
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.detection-info p {
+  margin-bottom: 8px;
+}
+
+.detection-info p:last-child {
+  margin-bottom: 0;
+}
+
+.detection-info strong {
+  color: var(--success-color);
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.confirmation-buttons button {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-confirm {
+  background: var(--success-color);
+  color: var(--primary-color);
+  border: none;
+}
+
+.btn-confirm:hover {
+  background: #05a380;
+  transform: translateY(-2px);
+}
+
+.btn-retry {
+  background: var(--accent-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.btn-retry:hover {
+  border-color: var(--success-color);
+  transform: translateY(-2px);
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary {
+  flex: 1;
+  padding: 12px 16px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  border-color: var(--success-color);
+  background: rgba(15, 52, 96, 0.7);
+}
+
+/* Scrollbar */
+.car-detection::-webkit-scrollbar {
+  width: 6px;
+}
+
+.car-detection::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+.car-detection::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 3px;
+}

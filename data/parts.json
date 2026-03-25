@@ -1,0 +1,168 @@
+[
+  {
+    "id": "liberty_walk",
+    "name": "Liberty Walk Kit",
+    "category": "body_kit",
+    "description": "Full aggressive body kit with wide fenders",
+    "price": 8500,
+    "compatibility": ["lamborghini_aventador_2012", "nissan_skyline_r34"],
+    "thumbnailUrl": "/kit_thumbnails/liberty_walk.jpg",
+    "properties": {
+      "spoiler": true,
+      "diffuser": true,
+      "side_skirts": true,
+      "front_bumper": true
+    }
+  },
+  {
+    "id": "mansory",
+    "name": "Mansory Kit",
+    "category": "body_kit",
+    "description": "Ultra-wide carbon fiber body kit",
+    "price": 12000,
+    "compatibility": ["lamborghini_aventador_2012", "bugatti_chiron"],
+    "thumbnailUrl": "/kit_thumbnails/mansory.jpg",
+    "properties": {
+      "spoiler": true,
+      "diffuser": true,
+      "side_skirts": true,
+      "front_bumper": true,
+      "carbon_fiber": true
+    }
+  },
+  {
+    "id": "hamann",
+    "name": "Hamann Aerodynamics",
+    "category": "body_kit",
+    "description": "Professional motorsport body kit",
+    "price": 9500,
+    "compatibility": ["lamborghini_aventador_2012", "ferrari_f430", "porsche_911_997"],
+    "thumbnailUrl": "/kit_thumbnails/hamann.jpg",
+    "properties": {
+      "spoiler": true,
+      "diffuser": true,
+      "side_skirts": true
+    }
+  },
+  {
+    "id": "novitec",
+    "name": "Novitec Rosso Kit",
+    "category": "body_kit",
+    "description": "Carbon fiber performance kit",
+    "price": 11000,
+    "compatibility": ["ferrari_f430"],
+    "thumbnailUrl": "/kit_thumbnails/novitec.jpg",
+    "properties": {
+      "spoiler": true,
+      "diffuser": true,
+      "carbon_fiber": true
+    }
+  },
+  {
+    "id": "tommykaira",
+    "name": "Tommy Kaira Body Kit",
+    "category": "body_kit",
+    "description": "Japanese tuning style kit",
+    "price": 6500,
+    "compatibility": ["nissan_skyline_r34"],
+    "thumbnailUrl": "/kit_thumbnails/tommykaira.jpg",
+    "properties": {
+      "spoiler": true,
+      "side_skirts": true,
+      "front_bumper": true
+    }
+  },
+  {
+    "id": "nismo",
+    "name": "NISMO Aero Kit",
+    "category": "body_kit",
+    "description": "Official Nissan motorsport aerodynamics",
+    "price": 7500,
+    "compatibility": ["nissan_skyline_r34"],
+    "thumbnailUrl": "/kit_thumbnails/nismo.jpg",
+    "properties": {
+      "spoiler": true,
+      "diffuser": true,
+      "side_skirts": true
+    }
+  },
+  {
+    "id": "ruf",
+    "name": "RUF Aerodynamics",
+    "category": "body_kit",
+    "description": "German racing performance kit",
+    "price": 10500,
+    "compatibility": ["porsche_911_997"],
+    "thumbnailUrl": "/kit_thumbnails/ruf.jpg",
+    "properties": {
+      "spoiler": true,
+      "diffuser": true
+    }
+  },
+  {
+    "id": "techart",
+    "name": "TechArt Aerodynamics",
+    "category": "body_kit",
+    "description": "Advanced carbon aerodynamics",
+    "price": 9800,
+    "compatibility": ["porsche_911_997"],
+    "thumbnailUrl": "/kit_thumbnails/techart.jpg",
+    "properties": {
+      "spoiler": true,
+      "diffuser": true,
+      "carbon_fiber": true
+    }
+  },
+  {
+    "id": "adv1_19",
+    "name": "ADV.1 19\" Wheels",
+    "category": "wheels",
+    "description": "Forged ultra-light competition wheels",
+    "price": 4500,
+    "compatibility": ["lamborghini_aventador_2012"],
+    "thumbnailUrl": "/wheel_thumbnails/adv1_19.jpg",
+    "properties": {
+      "diameter": 19,
+      "material": "forged_aluminum"
+    }
+  },
+  {
+    "id": "hre_19",
+    "name": "HRE 19\" Wheels",
+    "category": "wheels",
+    "description": "Premium American racing wheels",
+    "price": 5200,
+    "compatibility": ["lamborghini_aventador_2012", "ferrari_f430"],
+    "thumbnailUrl": "/wheel_thumbnails/hre_19.jpg",
+    "properties": {
+      "diameter": 19,
+      "material": "forged_aluminum"
+    }
+  },
+  {
+    "id": "rotiform_20",
+    "name": "Rotiform 20\" Wheels",
+    "category": "wheels",
+    "description": "Custom luxury concave wheels",
+    "price": 5800,
+    "compatibility": ["lamborghini_aventador_2012"],
+    "thumbnailUrl": "/wheel_thumbnails/rotiform_20.jpg",
+    "properties": {
+      "diameter": 20,
+      "material": "forged_aluminum"
+    }
+  },
+  {
+    "id": "work_18",
+    "name": "WORK 18\" Wheels",
+    "category": "wheels",
+    "description": "Japanese precision racing wheels",
+    "price": 3800,
+    "compatibility": ["nissan_skyline_r34"],
+    "thumbnailUrl": "/wheel_thumbnails/work_18.jpg",
+    "properties": {
+      "diameter": 18,
+      "material": "forged_aluminum"
+    }
+  }
+]

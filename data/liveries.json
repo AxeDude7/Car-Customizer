@@ -1,0 +1,77 @@
+[
+  {
+    "id": "matte_black",
+    "name": "Matte Black",
+    "type": "paint",
+    "description": "Sleek matte black finish",
+    "primaryColor": "#0A0E27",
+    "secondaryColor": null,
+    "compatibleCars": ["lamborghini_aventador_2012", "ferrari_f430", "porsche_911_997"],
+    "textureUrl": "/textures/matte_black.jpg"
+  },
+  {
+    "id": "carbon_black",
+    "name": "Carbon Black",
+    "type": "paint",
+    "description": "Deep carbon black with metallic sheen",
+    "primaryColor": "#1A1A1A",
+    "secondaryColor": "#333333",
+    "compatibleCars": ["lamborghini_aventador_2012", "bugatti_chiron"],
+    "textureUrl": "/textures/carbon_black.jpg"
+  },
+  {
+    "id": "racing_stripe",
+    "name": "Racing Stripe",
+    "type": "wrap",
+    "description": "Classic white racing stripes",
+    "primaryColor": "#0A0E27",
+    "secondaryColor": "#FFFFFF",
+    "compatibleCars": ["lamborghini_aventador_2012", "nissan_skyline_r34", "porsche_911_997"],
+    "textureUrl": "/textures/racing_stripe.jpg",
+    "pattern": "center_stripe"
+  },
+  {
+    "id": "nismo_livery",
+    "name": "NISMO Livery",
+    "type": "wrap",
+    "description": "Official NISMO racing livery",
+    "primaryColor": "#0082FA",
+    "secondaryColor": "#FFFFFF",
+    "compatibleCars": ["nissan_skyline_r34"],
+    "textureUrl": "/textures/nismo_livery.jpg",
+    "pattern": "nismo_style"
+  },
+  {
+    "id": "carbon_fiber",
+    "name": "Carbon Fiber",
+    "type": "wrap",
+    "description": "Full carbon fiber wrap texture",
+    "primaryColor": "#1A1A1A",
+    "secondaryColor": "#4A4A4A",
+    "compatibleCars": ["ferrari_f430", "porsche_911_997", "bugatti_chiron"],
+    "textureUrl": "/textures/carbon_fiber.jpg",
+    "pattern": "carbon_weave"
+  },
+  {
+    "id": "flames",
+    "name": "Flames",
+    "type": "wrap",
+    "description": "Custom flame design wrap",
+    "primaryColor": "#000000",
+    "secondaryColor": "#FF4500",
+    "compatibleCars": ["lamborghini_aventador_2012", "nissan_skyline_r34"],
+    "textureUrl": "/textures/flames.jpg",
+    "pattern": "flames"
+  },
+  {
+    "id": "digital_camo",
+    "name": "Digital Camouflage",
+    "type": "wrap",
+    "description": "Modern digital camouflage pattern",
+    "primaryColor": "#2F4F4F",
+    "secondaryColor": "#555555",
+    "compatibleCars": ["porsche_911_997", "bugatti_chiron"],
+    "textureUrl": "/textures/digital_camo.jpg",
+    "pattern": "digital_camouflage"
+  }
+]
