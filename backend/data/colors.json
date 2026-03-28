@@ -1,0 +1,65 @@
+[
+  {
+    "id": "color-red-ferrari",
+    "name": "Ferrari Red",
+    "hex": "#DC0000",
+    "category": "premium",
+    "price": 0
+  },
+  {
+    "id": "color-black-pearl",
+    "name": "Pearl Black",
+    "hex": "#0A0E27",
+    "category": "standard",
+    "price": 0
+  },
+  {
+    "id": "color-white-pearl",
+    "name": "Pearl White",
+    "hex": "#F5F5F5",
+    "category": "standard",
+    "price": 0
+  },
+  {
+    "id": "color-silver-metallic",
+    "name": "Metallic Silver",
+    "hex": "#C0C0C0",
+    "category": "standard",
+    "price": 0
+  },
+  {
+    "id": "color-blue-electric",
+    "name": "Electric Blue",
+    "hex": "#0099FF",
+    "category": "premium",
+    "price": 500
+  },
+  {
+    "id": "color-yellow-matte",
+    "name": "Matte Yellow",
+    "hex": "#FFDD00",
+    "category": "premium",
+    "price": 750
+  },
+  {
+    "id": "color-green-british",
+    "name": "British Racing Green",
+    "hex": "#004225",
+    "category": "premium",
+    "price": 600
+  },
+  {
+    "id": "color-orange-sunset",
+    "name": "Sunset Orange",
+    "hex": "#FF6600",
+    "category": "premium",
+    "price": 500
+  },
+  {
+    "id": "color-purple-midnight",
+    "name": "Midnight Purple",
+    "hex": "#2A0845",
+    "category": "premium",
+    "price": 800
+  }
+]

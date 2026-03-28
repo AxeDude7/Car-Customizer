@@ -1,0 +1,47 @@
+[
+  {
+    "id": "livery-racing-stripes",
+    "name": "Racing Stripes",
+    "description": "Classic racing stripe design",
+    "type": "stripes",
+    "pattern": "center_stripes",
+    "colors": ["#000000", "#FFFFFF"],
+    "price": 300
+  },
+  {
+    "id": "livery-camouflage",
+    "name": "Digital Camouflage",
+    "description": "Modern digital camouflage pattern",
+    "type": "pattern",
+    "pattern": "camouflage",
+    "colors": ["#4A4A4A", "#8B7355", "#A9A9A9"],
+    "price": 450
+  },
+  {
+    "id": "livery-checker-flag",
+    "name": "Checker Flag",
+    "description": "Classic checkered racing pattern",
+    "type": "pattern",
+    "pattern": "checker",
+    "colors": ["#000000", "#FFFFFF"],
+    "price": 350
+  },
+  {
+    "id": "livery-flames",
+    "name": "Flame Design",
+    "description": "Custom flame graphics",
+    "type": "graphics",
+    "pattern": "flames",
+    "colors": ["#FF4500", "#FFD700"],
+    "price": 500
+  },
+  {
+    "id": "livery-carbon",
+    "name": "Carbon Fiber Pattern",
+    "description": "Premium carbon fiber texture",
+    "type": "texture",
+    "pattern": "carbon",
+    "colors": ["#1a1a1a", "#333333"],
+    "price": 400
+  }
+]

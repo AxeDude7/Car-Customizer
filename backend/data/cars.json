@@ -1,0 +1,98 @@
+[
+  {
+    "id": "lamborghini-aventador-2012",
+    "make": "Lamborghini",
+    "model": "Aventador LP700-4",
+    "year": 2012,
+    "price": 397500,
+    "modelPath": "/models/lamborghini_aventador_2012.glb",
+    "thumbnail": "/thumbnails/lamborghini_aventador.jpg",
+    "specs": {
+      "engine": "5.2L V12",
+      "horsepower": 700,
+      "torque": 509,
+      "acceleration": "0-60: 2.9s",
+      "topSpeed": 217
+    }
+  },
+  {
+    "id": "ferrari-f430",
+    "make": "Ferrari",
+    "model": "F430",
+    "year": 2004,
+    "price": 400000,
+    "modelPath": "/models/ferrari_f430.glb",
+    "thumbnail": "/thumbnails/ferrari_f430.jpg",
+    "specs": {
+      "engine": "4.3L V8",
+      "horsepower": 490,
+      "torque": 398,
+      "acceleration": "0-60: 3.6s",
+      "topSpeed": 202
+    }
+  },
+  {
+    "id": "nissan-skyline-r34",
+    "make": "Nissan",
+    "model": "Skyline GT-R R34",
+    "year": 1999,
+    "price": 75000,
+    "modelPath": "/models/nissan_skyline_r34.glb",
+    "thumbnail": "/thumbnails/nissan_skyline_r34.jpg",
+    "specs": {
+      "engine": "2.6L Twin-Turbo I6",
+      "horsepower": 320,
+      "torque": 260,
+      "acceleration": "0-60: 3.2s",
+      "topSpeed": 165
+    }
+  },
+  {
+    "id": "porsche-911-turbo",
+    "make": "Porsche",
+    "model": "911 Turbo",
+    "year": 2011,
+    "price": 145000,
+    "modelPath": "/models/porsche_911_turbo.glb",
+    "thumbnail": "/thumbnails/porsche_911_turbo.jpg",
+    "specs": {
+      "engine": "3.8L Twin-Turbo H6",
+      "horsepower": 500,
+      "torque": 480,
+      "acceleration": "0-60: 2.7s",
+      "topSpeed": 194
+    }
+  },
+  {
+    "id": "mclaren-720s",
+    "make": "McLaren",
+    "model": "720S",
+    "year": 2017,
+    "price": 315000,
+    "modelPath": "/models/mclaren_720s.glb",
+    "thumbnail": "/thumbnails/mclaren_720s.jpg",
+    "specs": {
+      "engine": "4.0L Twin-Turbo V8",
+      "horsepower": 710,
+      "torque": 568,
+      "acceleration": "0-60: 2.8s",
+      "topSpeed": 212
+    }
+  },
+  {
+    "id": "bugatti-chiron",
+    "make": "Bugatti",
+    "model": "Chiron",
+    "year": 2016,
+    "price": 2500000,
+    "modelPath": "/models/bugatti_chiron.glb",
+    "thumbnail": "/thumbnails/bugatti_chiron.jpg",
+    "specs": {
+      "engine": "8.0L Quad-Turbo W16",
+      "horsepower": 1500,
+      "torque": 1180,
+      "acceleration": "0-60: 2.4s",
+      "topSpeed": 261
+    }
+  }
+]

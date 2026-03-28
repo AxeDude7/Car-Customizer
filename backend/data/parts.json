@@ -1,0 +1,50 @@
+[
+  {
+    "id": "bodykit-carbon-sport",
+    "name": "Carbon Sport Body Kit",
+    "category": "body-kits",
+    "price": 2500,
+    "description": "Lightweight carbon fiber body kit",
+    "compatible": ["all"]
+  },
+  {
+    "id": "bodykit-widebody",
+    "name": "Widebody Kit",
+    "category": "body-kits",
+    "price": 3500,
+    "description": "Aggressive widebody conversion",
+    "compatible": ["all"]
+  },
+  {
+    "id": "wheel-forged-20",
+    "name": "20\" Forged Wheels",
+    "category": "wheels",
+    "price": 2000,
+    "description": "Premium 20-inch forged aluminum wheels",
+    "compatible": ["all"]
+  },
+  {
+    "id": "wheel-forged-22",
+    "name": "22\" Forged Wheels",
+    "category": "wheels",
+    "price": 3000,
+    "description": "Premium 22-inch forged aluminum wheels",
+    "compatible": ["all"]
+  },
+  {
+    "id": "suspension-lowering",
+    "name": "Lowering Suspension",
+    "category": "suspension",
+    "price": 1200,
+    "description": "Aggressive lowering kit (-2 inches)",
+    "compatible": ["all"]
+  },
+  {
+    "id": "exhaust-sport",
+    "name": "Sport Exhaust System",
+    "category": "exhaust",
+    "price": 1500,
+    "description": "Performance exhaust with enhanced sound",
+    "compatible": ["all"]
+  }
+]

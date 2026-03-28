@@ -120,61 +120,149 @@ const Viewer3D: React.FC<Viewer3DProps> = ({
     }
   }, [])
 
+  // Create procedural car model
+  const createCarModel = () => {
+    const group = new THREE.Group()
+
+    // Main body - use primaryColor
+    const bodyGeom = new THREE.BoxGeometry(2, 1, 4)
+    const bodyMat = new THREE.MeshStandardMaterial({
+      color: primaryColor || 0xff0000,
+      metalness: 0.7,
+      roughness: 0.2,
+    })
+    const body = new THREE.Mesh(bodyGeom, bodyMat)
+    body.position.y = 0.5
+    body.castShadow = true
+    body.receiveShadow = true
+    group.add(body)
+
+    // Cabin/roof
+    const cabinGeom = new THREE.BoxGeometry(1.6, 0.8, 1.8)
+    const cabinMat = new THREE.MeshStandardMaterial({
+      color: primaryColor || 0xff0000,
+      metalness: 0.7,
+      roughness: 0.2,
+    })
+    const cabin = new THREE.Mesh(cabinGeom, cabinMat)
+    cabin.position.y = 1.4
+    cabin.position.z = -0.3
+    cabin.castShadow = true
+    cabin.receiveShadow = true
+    group.add(cabin)
+
+    // Windows
+    const windowGeom = new THREE.PlaneGeometry(1.4, 0.6)
+    const windowMat = new THREE.MeshStandardMaterial({
+      color: 0x87ceeb,
+      metalness: 0.9,
+      roughness: 0.1,
+      transparent: true,
+      opacity: 0.6,
+    })
+    const window1 = new THREE.Mesh(windowGeom, windowMat)
+    window1.position.set(0, 1.6, 0.5)
+    window1.rotation.y = 0.1
+    group.add(window1)
+
+    // Wheels
+    const wheelGeom = new THREE.CylinderGeometry(0.4, 0.4, 0.3, 32)
+    const wheelMat = new THREE.MeshStandardMaterial({
+      color: 0x333333,
+      metalness: 0.5,
+      roughness: 0.7,
+    })
+
+    const wheelPositions = [
+      [-0.9, 0.4, 1.2],
+      [0.9, 0.4, 1.2],
+      [-0.9, 0.4, -1.2],
+      [0.9, 0.4, -1.2],
+    ]
+
+    wheelPositions.forEach((pos) => {
+      const wheel = new THREE.Mesh(wheelGeom, wheelMat)
+      wheel.position.set(...(pos as [number, number, number]))
+      wheel.rotation.z = Math.PI / 2
+      wheel.castShadow = true
+      wheel.receiveShadow = true
+      group.add(wheel)
+    })
+
+    // Bumpers
+    const bumperGeom = new THREE.BoxGeometry(2, 0.3, 0.3)
+    const bumperMat = new THREE.MeshStandardMaterial({
+      color: 0x111111,
+      metalness: 0.6,
+      roughness: 0.4,
+    })
+    const frontBumper = new THREE.Mesh(bumperGeom, bumperMat)
+    frontBumper.position.set(0, 0.4, 2.2)
+    group.add(frontBumper)
+
+    const rearBumper = new THREE.Mesh(bumperGeom, bumperMat)
+    rearBumper.position.set(0, 0.4, -2.2)
+    group.add(rearBumper)
+
+    return group
+  }
+
   // Load model
   useEffect(() => {
-    if (!modelPath || !sceneRef.current) return
+    if (!sceneRef.current) return
 
     setIsLoading(true)
-    const loader = new GLTFLoader()
 
-    const defaultModelPath = '/models/lamborghini_aventador_2012.glb'
-    const pathToLoad = modelPath || defaultModelPath
+    // Remove old model
+    if (modelRef.current) {
+      sceneRef.current.remove(modelRef.current)
+    }
 
-    loader.load(
-      pathToLoad,
-      (gltf) => {
-        // Remove old model
-        if (modelRef.current) {
-          sceneRef.current!.remove(modelRef.current)
-        }
+    // Try to load real model if path provided
+    if (modelPath) {
+      const loader = new GLTFLoader()
+      loader.load(
+        modelPath,
+        (gltf) => {
+          const model = gltf.scene
+          model.castShadow = true
+          model.receiveShadow = true
 
-        const model = gltf.scene
-        model.castShadow = true
-        model.receiveShadow = true
-
-        // Apply materials to all meshes
-        model.traverse((child) => {
-          if (child instanceof THREE.Mesh) {
-            child.castShadow = true
-            child.receiveShadow = true
-            if (child.material instanceof THREE.Material) {
-              child.material.side = THREE.DoubleSide
+          // Apply shadow to all children
+          model.traverse((child) => {
+            if (child instanceof THREE.Mesh) {
+              child.castShadow = true
+              child.receiveShadow = true
             }
-          }
-        })
+          })
 
-        sceneRef.current!.add(model)
-        modelRef.current = model
+          sceneRef.current?.add(model)
+          modelRef.current = model
+          setIsLoading(false)
+        },
+        undefined,
+        (error) => {
+          // Fallback to procedural model if real model fails to load
+          console.warn('Failed to load model, using procedural fallback:', error)
+          const model = createCarModel()
+          model.castShadow = true
+          model.receiveShadow = true
+          sceneRef.current?.add(model)
+          modelRef.current = model
+          setIsLoading(false)
+        }
+      )
+    } else {
+      // No model path provided, use procedural generation
+      const model = createCarModel()
+      model.castShadow = true
+      model.receiveShadow = true
 
-        // Center and scale model
-        const box = new THREE.Box3().setFromObject(model)
-        const center = box.getCenter(new THREE.Vector3())
-        model.position.sub(center)
-        const size = box.getSize(new THREE.Vector3())
-        const maxDim = Math.max(size.x, size.y, size.z)
-        const scale = 3 / maxDim
-        model.scale.multiplyScalar(scale)
+      sceneRef.current.add(model)
+      modelRef.current = model
 
-        setIsLoading(false)
-      },
-      (progress) => {
-        console.log(`Loading: ${(progress.loaded / progress.total) * 100}%`)
-      },
-      (error) => {
-        console.error('Model loading error:', error)
-        setIsLoading(false)
-      }
-    )
+      setIsLoading(false)
+    }
   }, [modelPath])
 
   // Update colors
